@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+  .btn-secondary {
+    @apply btn bg-slate-200 text-slate-800 hover:bg-slate-300 focus:ring-slate-400;
+  }
+  .btn-success {
+    @apply btn bg-emerald-600 text-white hover:bg-emerald-700 focus:ring-emerald-500;
+  }
+  .btn-danger {
+    @apply btn bg-rose-600 text-white hover:bg-rose-700 focus:ring-rose-500;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden;
+  }
+  .input {
+    @apply w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition;
+  }
+  .label {
+    @apply block text-sm font-medium text-slate-700 mb-1;
+  }
+  .status-present { @apply bg-emerald-100 text-emerald-800; }
+  .status-absent { @apply bg-rose-100 text-rose-800; }
+  .status-late { @apply bg-amber-100 text-amber-800; }
+  .status-half-day { @apply bg-orange-100 text-orange-800; }
+}
